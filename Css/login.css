@@ -18,8 +18,8 @@ body{
 }
 
 h1{
-    font-weight: bold;
-    margin: 0;
+    font-weight: 24px;
+    margin: 10px 0;
 }
 
 h2{
@@ -74,17 +74,19 @@ form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 50px;
+    padding: 20px;
     height: 100%;
     text-align: center;
+    overflow-y: auto;
 }
 
 input{
     background: #eee;
     border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
+    padding: 8px 15px;
+    margin: 4px 0;
     width: 100%;
+    font-size: 13px;
 }
 
 .container{
@@ -100,9 +102,12 @@ input{
 }
 
 .form-container{
-    position: absolute;
+    position: relative;
+    width: 100% !important;
     top: 0;
-    height: 100%;
+    height: auto;
+    opacity: 1 !important;
+    transform: none !important;
     transition: all 0.6s ease-in-out;
 }
 
@@ -113,6 +118,7 @@ input{
 }
 
 .sign-up-container{
+    display: none;
     left: 0;
     width: 50%;
     opacity: 0;
@@ -120,10 +126,12 @@ input{
 }
 
 .container.right-panel-active .sign-in-container{
+    display: none;
     transform: translateX(100%);
 }
 
 .container.right-panel-active .sign-up-container{
+    display: block;
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -216,9 +224,10 @@ input{
     color: #333;
     border: 1px solid #ddd;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 8px 15px;
     font-size: 14px;
     cursor: pointer;
+    margin: 10px 0;
 }
 
 .google-btn img{
@@ -237,11 +246,13 @@ input{
 
 @media (max-width: 768px){
     .container{
-        width: 100%;
-        min-height: 600px;
+        width: 90%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     .overlay-container{
-        display: none;
+        display: none !important;
     }
     .sign-in-container, .sign-up-container{
         width: 100%;
