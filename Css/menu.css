@@ -1,0 +1,164 @@
+:root {
+    --guinda: #800040;
+    --naranja: #ff6b00;
+    --blanco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: var(--guinda);
+    color: var(--naranja);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-title {
+    font-size: 1.2rem;
+    color: var(--naranja);
+    margin: 0;
+}
+
+#menutoggles {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#menutoggles:hover {
+    color: var(--blanco);
+    background-color: var(--naranja);
+    border-radius: 8px;
+}
+
+#usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#usuario h3 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--naranja);
+}
+
+#cerrarSesion {
+    background-color: var(--naranja);
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--guinda);
+    color: var(--guinda);
+    transition: 0.3s;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+#menu.active {
+    left: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-header h2 {
+    color: var(--naranja);
+    margin: 0;
+}
+
+.close-btn {
+    background: var(--guinda);
+    border: none;
+    background-color: var(--guinda);
+    color: var(--guinda);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--naranja);
+}
+
+#close-btn {
+    background: transparent;
+    background-color: none;
+    border: none;
+    padding: 5px 10px;
+    color: var(--naranja);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#close-btn:hover {
+    color: var(--blanco);
+    background-color: var(--naranja);
+    border-radius: 8px;
+}
+
+
+#closeMenu h3 {
+    color: var(--naranja);
+    margin: 0;
+    font-size: 24px;
+    background: none;
+    border: none;
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu-links a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menu-links a:hover, .menu-links a.active {
+    background-color: var(--naranja);
+    border-radius: 0 25px 25px 0;
+    margin-right: 10px;
+}
+
+.menu-links img {
+    width: 20px;
+    filter: invert(1);
+}

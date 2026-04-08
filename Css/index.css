@@ -1,0 +1,170 @@
+:root {
+    --guinda: #800040;
+    --naranja: #ff6b00;
+    --blanco: #ffffff;
+}
+
+.hero-container {
+    background: linear-gradient(135deg, #ff6b00, #FF5F00);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    margin: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 32px;
+}
+
+/* Estilos para las tarjetas de estadísticas */
+
+.card-reportes {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#reportes-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#reportes-icon {
+    background-color:steelblue;
+    color: steelblue;
+}
+
+.card-reportes h3 {
+    margin: 0;
+    margin-right: 5px;
+    color: #333;
+    font-size: 1rem;
+}
+
+#reportes-actuales {
+    background-color: var(--guinda);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+#reportes-actuales:hover {
+    background-color: var(--naranja);
+}
+
+/* Parte de estilos para las tarjetas de reporte y recompensas */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#icon-recompensas, #icon-reportes {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#icon-recompensas { 
+    background-color: #880044; 
+    color: #880044;
+}
+
+#icon-reportes { 
+    background-color: #FF6600; 
+    color: #FF6600;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Estilos para los botones de recompensas y reportes */
+
+#recompensas{
+    background-color: var(--naranja);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#recompensas:hover {
+    background-color: var(--guinda);
+}
+
+#reportes {
+    background-color: var(--guinda);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#reportes:hover {
+    background-color: var(--naranja);
+}
