@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportes</title>
 <link rel="stylesheet" href="/Css/menu.css">
+<link rel="stylesheet" href="/Css/reportes.css">
 </head>
+
 <body>
     <header class="navbar">
         <div class="nav-left">
@@ -44,5 +46,67 @@
         </nav>
     </aside>
 
+    <!--Es el contenido de la pagina para los reportes guiado por figma actual-->
+    <main class="main-container">
+        <div class="info">
+            <h2 id="welcome-message">Usuario</h2>
+            <p>Crear un nuevo reporte</p>
+        </div>
+
+        <div class="card-reportes">
+            <form id="reporte-form" enctype="multipart/form-data">
+                 <p>Categoría del reporte</p>
+              <select name="categoria" id="categoria" required>
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="opcion1">Vehículo abandonado en la calle</option>
+                <option value="opcion2">Vehículo en la banqueta</option>
+                <option value="opcion3">Vehículo en la ciclovía</option>
+                <option value="opcion4">Vehículo en zona de carga y descarga</option>
+                <option value="opcion5">Vehículo en zona de discapacitados</option>
+                <option value="opcion6">Vehículo en zona de emergencia</option>
+                <option value="opcion7">Vehículo en zona de estacionamiento prohibido</option>
+                <option value="opcion8">Otro</option>
+            </select>
+
+            <p>Número de placa (opcional)</p>
+            <input type="text" id="placa" name="placa" placeholder="UES-1234">
+
+                <p>Fotografías (máximo 3)</p>
+                <div class="photos-container">
+                    <label class="photo-box">
+                        <input type="file" name="foto1" accept="image/*">
+                        <div class="box-content">
+                            <img src="/Recursos/icons/upload.svg" alt="subir">
+                            <span>Subir foto 1</span>
+                        </div>
+                    </label>
+
+                    <label class="photo-box">
+                        <input type="file" name="foto2" accept="image/*">
+                        <div class="box-content">
+                            <img src="/Recursos/icons/upload.svg" alt="subir">
+                            <span>Subir foto 2</span>
+                        </div>
+                    </label>
+
+                    <label class="photo-box">
+                        <input type="file" name="foto3" accept="image/*">
+                        <div class="box-content">
+                            <img src="/Recursos/icons/upload.svg" alt="subir">
+                            <span>Subir foto 3</span>
+                        </div>
+                    </label>
+                </div>
+
+            <p>Descripción del reporte</p>
+            <textarea id="descripcion" name="descripcion" placeholder="Describe el incidente..." required></textarea>
+
+            <button id="enviar-reporte" type="submit">Enviar Reporte</button>
+            </form>
+        </div>
+
+
+    </main>
 </body>
+<script src="/Js/reportes.js"></script>
 </html>

@@ -1,0 +1,154 @@
+:root{
+    --guinda: #800040;
+    --naranja: #ff6b00;
+    --blanco: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-reportes {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card-reportes p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+
+.card-reportes select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-reportes input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-reportes textarea {
+    width: 95%;
+    height: 120px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: auto;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.photos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.photo-box input[type="file"] {
+    display: none;
+}
+
+.success-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #28a745;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.photo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    background-color: #fcfcfc;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-box:hover {
+    background-color: #f0f0f0;
+    border-color: #fd9042;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777;
+    gap: 10px;
+}
+
+.box-content img {
+    width: 40px;
+    opacity: 0.6;
+}
+
+.card-reportes button {
+    background-color: var(--naranja);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-reportes button:hover {
+    background-color: var(--guinda);
+}
+
+#enviar-reporte {
+    background-color: var(--naranja);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: fit-content; 
+}
+
+#enviar-reporte:hover {
+    background-color: var(--guinda);
+    transform: scale(1.05);
+}
