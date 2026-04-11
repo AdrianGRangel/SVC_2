@@ -46,3 +46,23 @@ document.querySelectorAll('.photo-box input[type="file"]').forEach(input => {
         }
     });
 });
+
+// Función para abrir el primer modal al dar clic en "Enviar Reporte"
+document.getElementById('enviar-reporte').addEventListener('click', function(e) {
+   const formulario = this.closest('form');
+   if(formulario.checkValidity()) {
+       e.preventDefault();
+        document.getElementById('modal-advertencia').style.display = 'flex';
+    } else {
+        formulario.reportValidity();
+    }
+    });
+
+function cerrarModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+function cambiarModal(actual, siguiente) {
+    cerrarModal(actual);
+    document.getElementById(siguiente).style.display = 'flex';
+}

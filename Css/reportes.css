@@ -152,3 +152,102 @@ main {
     background-color: var(--guinda);
     transform: scale(1.05);
 }
+
+/* Fondo oscuro */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja blanca */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+/* Botones y opciones de servicio */
+.modal-buttons { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+.btn-cancel { 
+    flex: 1; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    background: white; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn-cancel:hover { 
+    background: #ff6b00; 
+    color:white;
+}
+
+.btn-next { 
+    flex: 1; 
+    padding: 12px; 
+    background: #880044; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn-next:hover { 
+    background: #6a0033;
+}
+
+.service-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    text-align: left;
+    gap: 15px;
+}
+
+.icon-service, .icon-warning, .icon-success { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.blue { 
+    background: #e3f2fd; 
+}
+.purple { 
+    background: #f3e5f5; 
+}
+
+@keyframes slideUp {
+    from { 
+        transform: translateY(20px); opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); opacity: 1; 
+    }
+}
