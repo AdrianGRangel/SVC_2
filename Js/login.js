@@ -9,11 +9,13 @@ const registerForm = document.querySelector('.sign-up-container form');
 const passwordInput = registerForm.querySelector('input[type="password"]');
 const confirmPasswordInput = registerForm.querySelector('input[name="confirm-password"]');
 
-signUpButton.addEventListener('click', () => {
+signUpButton.addEventListener('click', (e) => {
+    e.preventDefault();
     container.classList.add("right-panel-active");
 });
 
-signInButton.addEventListener('click', () => {
+signInButton.addEventListener('click', (e) => {
+    e.preventDefault();
     container.classList.remove("right-panel-active");
 });
 
