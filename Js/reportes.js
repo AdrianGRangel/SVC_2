@@ -64,5 +64,34 @@ function cerrarModal(id) {
 
 function cambiarModal(actual, siguiente) {
     cerrarModal(actual);
+    if(siguiente === 'modal-exito') {
+        mostrarExito();
+    }
     document.getElementById(siguiente).style.display = 'flex';
+}
+
+function generarFolio() {
+    const ahora = new Date();
+    const fecha = ahora.getFullYear() + '' + String(ahora.getMonth() + 1).padStart(2, '0') + '' + String(ahora.getDate()).padStart(2, '0');
+    const hora = String(ahora.getHours()).padStart(2, '0') + '' + String(ahora.getMinutes()).padStart(2, '0') + '' + String(ahora.getSeconds()).padStart(2, '0');
+    const random = Math.floor(1000 + Math.random() * 9000);
+    return `RPT-${fecha}${hora}-${random}-UES`;
+}
+
+function mostrarExito() {
+    const folio = generarFolio();
+    const elementoFolio = document.getElementById('folio-numero');
+    elementoFolio.innerHTML = `<strong>${folio}</strong>`;
+    const btncopy = document.querySelector('.copy-btn');
+    btncopy.onclick = function() {
+        copiarFolio(folio);
+    };
+}
+
+function copiarFolio(folio) {
+    navigator.clipboard.writeText(folio).then(function() {
+        alert('Folio copiado al portapapeles: ' + folio);
+    }, function(err) {
+        alert('Error al copiar el folio: ', err);
+    });
 }

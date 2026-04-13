@@ -168,13 +168,21 @@ main {
 /* Caja blanca */
 .modal-content {
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     padding: 30px;
     border-radius: 20px;
     width: 90%;
-    max-width: 400px;
-    text-align: center;
+    max-width: 350px;
+    text-align: justify;
     position: relative;
     animation: slideUp 0.3s ease;
+}
+
+.modal-content h2 {
+    margin: 0;
 }
 
 /* Botones y opciones de servicio */
@@ -225,22 +233,128 @@ main {
     color: #333;
     text-align: left;
     gap: 15px;
+    transition: 0.3s;
 }
 
-.icon-service, .icon-warning, .icon-success { 
+.service-option:hover {
+    background: #eeeded;
+}
+
+.texto-inicial {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    margin: 15 0;
+}
+
+.naranja {
+    color: rgb(230, 94, 4);
+    font-weight: bold;
+}
+
+.rojo {
+    color: rgb(190, 2, 2);
+    font-weight: bold;
+}
+
+.icon-warning { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px; 
     height: 40px; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    border-radius: 12px; 
+    font-size: 24px;
+    color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.2);
 }
 
-.blue { 
-    background: #e3f2fd; 
+.icon-success { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 12px; 
+    font-size: 24px;
+    color: #22c55e;
+    background-color: rgba(34, 197, 94, 0.15);
 }
-.purple { 
-    background: #f3e5f5; 
+
+.icon-service { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 12px; 
+    font-size: 24px;
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.15);
+}
+
+.folio-container {
+    background: #f5f4f4;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    border-radius: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.copy-btn img {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: rgb(165, 165, 248);
+}
+
+.credit-badge {
+    background: #22c55e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(230, 111, 0, 0.1);
+}
+
+.policia { 
+    background: #a8d6ff; 
+}
+
+.grua { 
+    background: #f5dafa; 
+}
+
+.btn-help { 
+    align-items: center;
+    flex: 1; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    background: white; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn-help:hover { 
+    background: #6a0033; 
+    color:white;
 }
 
 @keyframes slideUp {

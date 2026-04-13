@@ -109,8 +109,11 @@
     <div class="modal-content">
         <div class="icon-warning">⚠️</div>
         <h2>Advertencia</h2>
-        <p><strong>Importante:</strong> Generar reportes falsos puede llevar a la <strong>suspensión de tu cuenta</strong>.</p>
-        <p>En algunos casos, los reportes pueden ser evaluados como no válidos. Asegúrate de que la información proporcionada sea veraz y precisa.</p>
+        <p class="texto-inicial">
+            <span class="naranja">¡Importante!</span>
+                Generar reportes falsos o con información incorrecta puede afectar la credibilidad de la plataforma y perjudicar a otros usuarios que necesitan ayuda real.
+                <span class="rojo">Estas conductas serán acreedoras de sanciones, como suspensión de la cuenta o inhabilitación de la misma.</span>
+        </p>
         <div class="modal-buttons">
             <button class="btn-cancel" onclick="cerrarModal('modal-advertencia')">Cancelar</button>
             <button class="btn-next" onclick="cambiarModal('modal-advertencia', 'modal-exito')">Enviar de todas formas</button>
@@ -124,9 +127,9 @@
         <h2>¡Reporte enviado!</h2>
         <p>Tu reporte ha sido enviado exitosamente. Aquí está tu número de folio:</p>
         <div class="folio-container">
-            <p id="folio">Folio: </p> 
-            <p id="folio-numero"><strong>RPT-2026-UES</strong></p>
-            <button class="copy-btn" onclick="copiarFolio()"><img src="/Recursos/icons/copy.svg" alt="Copiar"></button>
+            <p id="folio"><strong>Folio:</strong></p> 
+            <p id="folio-numero"><strong>Generando...</strong></p>
+            <button class="copy-btn"><img src="/Recursos/icons/copy.svg" alt="Copiar"></button>
         </div>
         <div class="credit-badge">Has ganado 37 créditos.</div>
         <button class="btn-next" onclick="cambiarModal('modal-exito', 'modal-servicios')">Entendido</button>
@@ -140,7 +143,7 @@
         <p>¿Necesitas contactar algún servicio para este reporte?</p>
         
         <a href="tel:911" class="service-option">
-            <div class="icon-service blue">📞</div>
+            <div class="icon-service policia">📞</div>
             <div>
                 <strong>Avisar a la policía</strong>
                 <span>Llamada directa a emergencias</span>
@@ -148,14 +151,14 @@
         </a>
 
         <a href="tel:6623585868" class="service-option">
-            <div class="icon-service purple">🚚</div>
+            <div class="icon-service grua">🚚</div>
             <div>
                 <strong>Solicitar grúa</strong>
                 <span>Servicio de remolque</span>
             </div>
         </a>
 
-        <button class="no-help" onclick="cerrarModal('modal-servicios')">No necesito ayuda ahora</button>
+        <button class="btn-help" onclick="cerrarModal('modal-servicios')">No necesito ayuda ahora</button>
     </div>
 </div>
 
