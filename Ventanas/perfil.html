@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
 <link rel="stylesheet" href="/Css/menu.css">
+<link rel="stylesheet" href="/Css/perfil.css">
 </head>
 <body>
     <header class="navbar">
@@ -45,27 +46,47 @@
     </aside>
 
     <main>
-        <div class="Perfil">
+        <div class="perfil">
             <h2>Mi perfil</h2>
             <p>Administración de tu información personal</p>
             <div class="foto">
+                <div class="img-container">
                 <img src="/Recursos/icons/person.svg">
+                </div>
                 <h3 id="usuario">Usuario</h3>
                 <p id="correo">correo</p>
+                <hr>
             </div>
+
             <div class="container-informacion">
-                <form id="container-informacion">
-                    <label for="name">Nombre</label>
-                    <input type="text" placeholder="Nombre">
-                    <label for="lastname">Apellidos</label>
-                    <input type="text" placeholder="Apellidos">
-                    <label for="number">Telefono</label>
-                    <input type="number" placeholder="Numero-Telefonico">
-                    <label for="email">Correo Electronico</label>
-                    <input type="email" placeholder="correo">
-                    <label for="address">Dirección</label>
-                    <button type="submit">Editar perfil</button>
-                    <button type="button">Cambiar contraseña</button>
+                <form id="form-perfil">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" placeholder="nombre" readonly>
+
+                    <label>Apellidos</label>
+                    <input type="text" id="apellidos" placeholder="apellidos" readonly>
+
+                    <label>Teléfono</label>
+                    <input type="number" id="telefono" placeholder="telefono" readonly>
+
+                    <label>Correo Electronico</label>
+                    <input type="email" id="correo" placeholder="correo" readonly>
+
+                    <label>Dirección</label>
+                    <input type="text" id="direccion" placeholder="direccion" readonly>
+
+                    <div id="seccion-password" style="display: none; margin-top: 20px;">
+                        <label>Contraseña</label>
+                        <input type="password" id="password" placeholder="contraseña">
+                        <label>Confirmar Contraseña</label>
+                        <input type="password" id="confirm-password" placeholder="confirmar contraseña">
+                    </div>
+
+                    <div id="botones">
+                    <button type="button" id="btn-editar">Editar perfil</button>
+                    <button type="button" id="btn-pass">Cambiar contraseña</button>
+                    <button type="submit" id="btn-guardar">Guardar cambios</button>
+                    </div>
                 </form>
             </div>
 
@@ -77,4 +98,5 @@
         </div>
     </main>
 </body>
+<script src="/Js/perfil.js"></script>
 </html>
