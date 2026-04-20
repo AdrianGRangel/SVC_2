@@ -13,12 +13,13 @@
         <div class="form-container sign-in-container">
             <form action="#">
                 <h1>Iniciar Sesión</h1>
-                <button class="google-btn"> <img src="/Recursos/icons/google.png" alt="Google"> <a href="index.html">Iniciar sesión con Google</a></button>
+                <button type="button" id="btn-google" class="google-btn"> 
+                    <img src="/Recursos/icons/google.png" alt="Google">Iniciar sesión con Google</button>
                 <!--Apartado para el correo electronico-->
                 <input type="email" placeholder="Correo Electrónico" required />
                 <input type="password" placeholder="Contraseña" required checked/>
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button type="submit">Iniciar Sesión <a href="index.html"></a></button>
+                <button type="submit" id="iniciar">Iniciar Sesión</button>
                 <p>¿No tienes una cuenta? <button class="ghost" id="signUp">Registrarse</button> </p>
             </form>
         </div>
@@ -26,23 +27,18 @@
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Crear Cuenta</h1>
-                <button class="google-btn"> <img src="/Recursos/icons/google.png" alt="Google"><a href="index.html">Registrarse con Google</a></button>
-                <input type="text" placeholder="Nombre" required/>
-                <input type="text" placeholder="Apellidos" required />
+                <button type="button" id="btn-google" class="google-btn"> 
+                    <img src="/Recursos/icons/google.png" alt="Google">Iniciar sesión con Google</button>
 
-                <!--Apartado para el numero telefonico debe de contener 10 digitos-->
-                <input type="number" placeholder="Teléfono celular" 
-                     pattern="[0-9]{10}" title="El número de teléfono debe contener 10 dígitos" required />
-                <!--Apartado para el correo electronico a@a.com-->
-                <input type="email" placeholder="Correo Electrónico" title="Por favor, ingrese un correo electrónico válido" required />
-                <!--Apartado para la contraseña debe de contener al menos 8 caracteres y un numero-->
-                <input type="text" placeholder="Dirección"
-                         pattern="^([a-zA-Z0-9._%+-]+)$" required />  
-                <input type="password" placeholder="Contraseña" 
-                         minlength="4" required />
-                <input name="confirm-password" type="password" class="passConfirm" placeholder="Confirmar Contraseña" required />
-                            <div class="error-message" style="color: red; display: none;">Las contraseñas no coinciden</div>
-                <button type="submit" onclick="alert('Registro exitoso')">Registrarse</button>
+                    <input type="text" id="reg-nombre" placeholder="Nombre" required/>
+                    <input type="text" id="reg-apellidos" placeholder="Apellidos" required />
+                    <input type="number" id="reg-telefono" placeholder="Teléfono celular" required />
+                    <input type="email" id="reg-correo" placeholder="Correo Electrónico" required />
+                    <input type="text" id="reg-direccion" placeholder="Dirección" required />
+                    <input type="password" id="reg-pass" placeholder="Contraseña" minlength="4" required />
+                    <input type="password" id="reg-confirmar-pass" placeholder="Confirmar Contraseña" minlength="4" required />
+
+                <button type="submit" id="registro">Registrarse</button>
                 <p>¿Ya tienes una cuenta? <button class="ghost" id="signIn">Iniciar Sesión</button> </p>
             </form>
         </div>

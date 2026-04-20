@@ -1,52 +1,78 @@
-const form = document.getElementById('form-perfil');
-const inputs = form.querySelectorAll('input');
-const btnEditar = document.getElementById('btn-editar');
-const btnGuardar = document.getElementById('btn-guardar');
-const btnPass = document.getElementById('btn-pass');
-const seccionPass = document.getElementById('seccion-password');
-
-window.onload = () => {
-    inputs.forEach(input => {
-        const valorGuardado = localStorage.getItem(input.id);
-        if (valorGuardado) {
-            input.value = valorGuardado;
-            if(input.id === 'nombre') document.getElementById('display-usuario').innerText = valorGuardado;
-            if(input.id === 'correo') document.getElementById('display-correo').innerText = valorGuardado;
-        }
-    });
-};
-
+const btnEditar = document.getElementById('btn-editar-perfil');
+const btnAbrirPass = document.getElementById('btn-abrir-pass');
+const btnGuardar = document.getElementById('btn-guardar-cambios');
+const btnCancelar = document.getElementById('btn-cancelar-edicion');
+const modalPass = document.getElementById('modal-password');
+const inputsPerfil = document.querySelectorAll('#form-perfil input[readonly]');
 
 btnEditar.addEventListener('click', () => {
-    inputs.forEach(input => input.removeAttribute('readonly'));
+    inputsPerfil.forEach(input => input.removeAttribute('readonly'));
     btnEditar.style.display = 'none';
-    btnGuardar.style.display = 'block';
-    btnPass.style.display = 'block';
-    seccionPass.style.display = 'block';
-    inputs[0].focus();
+    btnAbrirPass.style.display = 'none';
+    btnGuardar.style.display = 'inline-block';
+    btnCancelar.style.display = 'inline-block';
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+btnCancelar.addEventListener('click', () => {
+    location.reload(); 
+});
 
-    const p1 = document.getElementById('pass1').value;
-    const p2 = document.getElementById('pass2').value;
+btnAbrirPass.addEventListener('click', () => {
+    abrirModalPass();
+});
 
-    if (p1 !== "" || p2 !== "") {
-        if (p1 !== p2) {
-            alert("Las contraseñas no coinciden.");
-            return;
-        }
-        localStorage.setItem('password', p1);
+function abrirModalPass() {
+    modalPass.style.display = 'flex';
+}
+
+function cerrarModalPass() {
+    modalPass.style.display = 'none';
+}
+
+function simularGuardarPass() {
+    const input1 = document.getElementById('nueva-pass');
+    const input2 = document.getElementById('confirmar-pass');
+    const errorPass = document.getElementById('error-pass');
+    const errorConfirmarPass = document.getElementById('error-confirmar-pass');
+
+    if (input1.value === "" || input2.value === "") {
+        errorPass.textContent = "Por favor, completa ambos campos.";
+        input1.focus();
+        errorConfirmarPass.textContent = "";
+        return;
     }
 
+    if (input1.value === input2.value) {
+        localStorage.setItem('userPassword', input1.value);
+        alert("Contraseña actualizada correctamente.");
+        cerrarModalPass();
+        input1.value = "";
+        input2.value = "";
+        errorPass.textContent = "";
+        errorConfirmarPass.textContent = "";
 
-    inputs.forEach(input => {
-        if(input.id !== 'pass1' && input.id !== 'pass2') {
-            localStorage.setItem(input.id, input.value);
-        }
-    });
+    } else {
+        errorConfirmarPass.textContent = "Las contraseñas no coinciden.";
+        input2.focus();
+        errorPass.textContent = "";
+    }
+    }
 
-    alert("Información actualizada correctamente.");
-    location.reload();
-});
+window.onclick = function(event) {
+    if (event.target == modalPass) {
+        cerrarModalPass();
+    }
+}
+
+window.onload = function() {
+    document.getElementById('nombre-perfil').value = localStorage.getItem('nombre') || "";
+    document.getElementById('apellidos-perfil').value = localStorage.getItem('apellidos') || "";
+    document.getElementById('telefono-perfil').value = localStorage.getItem('telefono') || "";
+    document.getElementById('correo-perfil').value = localStorage.getItem('correo') || "";
+    document.getElementById('direccion-perfil').value = localStorage.getItem('direccion') || "";
+
+    const usuario = localStorage.getItem('usuario');
+    if (usuario) {
+        document.getElementById('usuario-label').textContent = usuario;
+    }
+};

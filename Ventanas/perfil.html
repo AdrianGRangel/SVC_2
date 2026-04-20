@@ -75,20 +75,33 @@
                     <label>Dirección</label>
                     <input type="text" id="direccion" placeholder="direccion" readonly>
 
-                    <div id="seccion-password" style="display: none; margin-top: 20px;">
-                        <label>Contraseña</label>
-                        <input type="password" id="password" placeholder="contraseña">
-                        <label>Confirmar Contraseña</label>
-                        <input type="password" id="confirm-password" placeholder="confirmar contraseña">
-                    </div>
-
-                    <div id="botones">
-                    <button type="button" id="btn-editar">Editar perfil</button>
-                    <button type="button" id="btn-pass">Cambiar contraseña</button>
-                    <button type="submit" id="btn-guardar">Guardar cambios</button>
+                    <div class="botones-container">
+                        <button type="button" id="btn-editar-perfil" class="btn-editar">Editar perfil</button>
+                        <button type="button" id="btn-abrir-pass" onclick="abrirModalPass()" class="btn-pass">Cambiar contraseña</button>
+    
+                        <button type="button" id="btn-cancelar-edicion" class="btn-cancelar" style="display: none;">Cancelar</button>
+                        <button type="submit" id="btn-guardar-cambios" class="btn-guardar" style="display: none;">Guardar cambios</button>
                     </div>
                 </form>
             </div>
+
+                        <div id="modal-password" class="modal-overlay">
+                            <div class="modal-content">
+                                <h3>Cambiar contraseña</h3>
+                                <p>Introduce tu nueva clave de acceso.</p>
+                                
+                                <label>Nueva contraseña</label>
+                                <input type="password" id="nueva-pass" placeholder="********">
+                                <span id="error-pass" class="error-message"></span>
+                                <label>Confirmar contraseña</label>
+                                <input type="password" id="confirmar-pass" placeholder="********">
+                                <span id="error-confirmar-pass" class="error-message"></span>
+                                <div class="modal-buttons">
+                                    <button type="button" class="btn-cancelar" onclick="cerrarModalPass()">Cancelar</button>
+                                    <button type="button" class="btn-guardar" onclick="simularGuardarPass()">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
 
             <div class="conteiner-recompensas">
                 <img src="/Recursos/icons/trophy.svg"> <h2 id="titile-card">Tarjetas de regalo y transferencias</h2>
@@ -98,5 +111,6 @@
         </div>
     </main>
 </body>
+
 <script src="/Js/perfil.js"></script>
 </html>
