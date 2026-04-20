@@ -81,7 +81,7 @@
                 <h3>Resumen diario</h3>
                 <div class="summary-number">4</div>
                 <p>Notificaciones pendientes que requieren revisi&oacute;n o seguimiento de tu parte.</p>
-                <a class="action-button secondary-button" href="historial.html">Ver historial relacionado</a>
+                <button class="action-button secondary-button" type="button" data-notification="aprobacion">Ver desglose completo</button>
             </article>
 
             <article class="panel-card">
@@ -102,42 +102,83 @@
             <h3>Notificaciones recientes</h3>
             <p>Mensajes m&aacute;s recientes asociados a tu actividad en la plataforma.</p>
             <ul>
-                <li class="list-item">
+                <li class="list-item clickable-item" data-notification="aprobacion">
                     <div>
-                        <strong>Tu reporte RPT-20260419-1432 fue aprobado</strong>
-                        <span>Se acreditaron 37 puntos a tu saldo por validaci&oacute;n exitosa.</span>
+                        <strong>Veh&iacute;culo en la banqueta: reporte aprobado</strong>
+                        <span>Se acreditaron 37 puntos a tu saldo por la validaci&oacute;n del reporte RPT-20260419-1432.</span>
                         <small>Hace 12 minutos</small>
                     </div>
-                    <span class="status-pill status-success">Nueva</span>
                 </li>
-                <li class="list-item">
+                <li class="list-item clickable-item" data-notification="evidencia">
                     <div>
-                        <strong>Se requiere una fotograf&iacute;a adicional</strong>
-                        <span>El equipo de revisi&oacute;n solicit&oacute; una evidencia m&aacute;s clara del incidente.</span>
+                        <strong>Veh&iacute;culo en zona de discapacitados: evidencia adicional</strong>
+                        <span>El equipo de revisi&oacute;n solicit&oacute; una fotograf&iacute;a m&aacute;s clara para continuar.</span>
                         <small>Hace 1 hora</small>
                     </div>
-                    <span class="status-pill status-warning">Importante</span>
                 </li>
-                <li class="list-item">
+                <li class="list-item clickable-item" data-notification="recompensa">
                     <div>
-                        <strong>Nueva recompensa disponible</strong>
-                        <span>Ya puedes solicitar una tarjeta de regalo con tus puntos acumulados.</span>
+                        <strong>Veh&iacute;culo en la ciclov&iacute;a: recompensa acreditada</strong>
+                        <span>Tu reporte cerrado sum&oacute; puntos y ya tienes un nuevo premio disponible.</span>
                         <small>Hoy, 9:40 a. m.</small>
                     </div>
-                    <span class="status-pill status-info">Sistema</span>
                 </li>
-                <li class="list-item">
+                <li class="list-item clickable-item" data-notification="recordatorio">
                     <div>
-                        <strong>Recordatorio de actividad</strong>
-                        <span>Tienes reportes abiertos pendientes de seguimiento en tu historial.</span>
+                        <strong>Veh&iacute;culo abandonado en la calle: seguimiento pendiente</strong>
+                        <span>Tienes un caso abierto en historial y a&uacute;n requiere revisi&oacute;n.</span>
                         <small>Ayer, 6:15 p. m.</small>
                     </div>
-                    <span class="status-pill status-neutral">Le&iacute;da</span>
                 </li>
             </ul>
         </section>
     </main>
 
+    <div id="notification-modal" class="modal-overlay">
+        <div class="panel-modal">
+            <div class="panel-modal-header">
+                <div>
+                    <h3 id="modal-title">Detalle de notificaci&oacute;n</h3>
+                    <p id="modal-subtitle">Consulta el desglose completo</p>
+                </div>
+                <button class="modal-close" type="button" data-close-modal>X</button>
+            </div>
+
+            <div class="panel-modal-body">
+                <div class="detail-block">
+                    <div class="detail-row">
+                        <span class="detail-label">Estado</span>
+                        <span id="modal-status" class="status-pill status-info">Sistema</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Fecha</span>
+                        <span id="modal-date" class="detail-value">19 de abril, 2026</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Categoria</span>
+                        <span id="modal-category" class="detail-value">General</span>
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <h4>Descripcion</h4>
+                    <p id="modal-description">Aqui aparecera el detalle completo de la notificacion seleccionada.</p>
+                </div>
+
+                <div class="detail-block">
+                    <h4>Desglose</h4>
+                    <ul id="modal-details" class="detail-list"></ul>
+                </div>
+
+                <div class="detail-block">
+                    <h4>Siguiente accion</h4>
+                    <p id="modal-action">Aqui apareceran las recomendaciones relacionadas con la notificacion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="/Js/paneles.js"></script>
+<script src="/Js/notificaciones.js"></script>
 </html>
