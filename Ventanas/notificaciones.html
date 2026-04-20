@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notificaciones</title>
     <link rel="stylesheet" href="/Css/menu.css">
+    <link rel="stylesheet" href="/Css/paneles.css">
 </head>
 <body>
     <header class="navbar">
@@ -44,5 +45,99 @@
         </nav>
     </aside>
 
+    <main class="panel-page">
+        <section class="panel-hero">
+            <div class="panel-hero-top">
+                <div class="hero-icon">
+                    <img src="/Recursos/icons/bell.svg" alt="Notificaciones">
+                </div>
+                <div>
+                    <h2 id="page-welcome">Hola, Usuario</h2>
+                    <p>Mantente al tanto de tus reportes, actualizaciones del sistema y nuevas alertas.</p>
+                </div>
+            </div>
+
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <span>Sin leer</span>
+                    <strong>4 alertas</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>Hoy</span>
+                    <strong>2 mensajes nuevos</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>Configuraci&oacute;n</span>
+                    <strong>Alertas activas</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-grid">
+            <article class="panel-card accent-orange">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/bell.svg" alt="Resumen">
+                </div>
+                <h3>Resumen diario</h3>
+                <div class="summary-number">4</div>
+                <p>Notificaciones pendientes que requieren revisi&oacute;n o seguimiento de tu parte.</p>
+                <a class="action-button secondary-button" href="historial.html">Ver historial relacionado</a>
+            </article>
+
+            <article class="panel-card">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/warning.svg" alt="Importante">
+                </div>
+                <h3>Alertas prioritarias</h3>
+                <div class="summary-number">1</div>
+                <p>Un reporte necesita informaci&oacute;n adicional para completar su validaci&oacute;n.</p>
+                <div class="tag-row">
+                    <span class="tag">Seguimiento requerido</span>
+                    <span class="tag">Respuesta en 24 h</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="list-card">
+            <h3>Notificaciones recientes</h3>
+            <p>Mensajes m&aacute;s recientes asociados a tu actividad en la plataforma.</p>
+            <ul>
+                <li class="list-item">
+                    <div>
+                        <strong>Tu reporte RPT-20260419-1432 fue aprobado</strong>
+                        <span>Se acreditaron 37 puntos a tu saldo por validaci&oacute;n exitosa.</span>
+                        <small>Hace 12 minutos</small>
+                    </div>
+                    <span class="status-pill status-success">Nueva</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Se requiere una fotograf&iacute;a adicional</strong>
+                        <span>El equipo de revisi&oacute;n solicit&oacute; una evidencia m&aacute;s clara del incidente.</span>
+                        <small>Hace 1 hora</small>
+                    </div>
+                    <span class="status-pill status-warning">Importante</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Nueva recompensa disponible</strong>
+                        <span>Ya puedes solicitar una tarjeta de regalo con tus puntos acumulados.</span>
+                        <small>Hoy, 9:40 a. m.</small>
+                    </div>
+                    <span class="status-pill status-info">Sistema</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Recordatorio de actividad</strong>
+                        <span>Tienes reportes abiertos pendientes de seguimiento en tu historial.</span>
+                        <small>Ayer, 6:15 p. m.</small>
+                    </div>
+                    <span class="status-pill status-neutral">Le&iacute;da</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
 </body>
+<script src="/Js/paneles.js"></script>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial</title>
     <link rel="stylesheet" href="/Css/menu.css">
+    <link rel="stylesheet" href="/Css/paneles.css">
 </head>
 <body>
     <header class="navbar">
@@ -44,5 +45,99 @@
         </nav>
     </aside>
 
+    <main class="panel-page">
+        <section class="panel-hero">
+            <div class="panel-hero-top">
+                <div class="hero-icon">
+                    <img src="/Recursos/icons/history.svg" alt="Historial">
+                </div>
+                <div>
+                    <h2 id="page-welcome">Hola, Usuario</h2>
+                    <p>Revisa el seguimiento completo de tus reportes y el estado actual de cada uno.</p>
+                </div>
+            </div>
+
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <span>Reportes totales</span>
+                    <strong>18 registros</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>En proceso</span>
+                    <strong>3 abiertos</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>Resueltos</span>
+                    <strong>15 cerrados</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-grid">
+            <article class="panel-card">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/docs.svg" alt="Actividad">
+                </div>
+                <h3>Actividad reciente</h3>
+                <div class="summary-number">3</div>
+                <p>Reportes siguen activos y est&aacute;n en revisi&oacute;n por las autoridades correspondientes.</p>
+                <a class="action-button" href="reportes.html">Crear nuevo reporte</a>
+            </article>
+
+            <article class="panel-card accent-orange">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/trophy.svg" alt="Cr&eacute;ditos">
+                </div>
+                <h3>Cr&eacute;ditos obtenidos</h3>
+                <div class="summary-number">684</div>
+                <p>Puntos generados por tus reportes cerrados correctamente en los &uacute;ltimos 30 d&iacute;as.</p>
+                <div class="tag-row">
+                    <span class="tag">+111 este mes</span>
+                    <span class="tag">Buen ritmo</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="list-card">
+            <h3>L&iacute;nea de tiempo</h3>
+            <p>Movimientos m&aacute;s recientes dentro de tu historial de reportes.</p>
+            <ul class="timeline">
+                <li class="list-item">
+                    <div>
+                        <strong>Veh&iacute;culo en banqueta</strong>
+                        <span>Reporte actualizado con evidencia complementaria y enviado a validaci&oacute;n.</span>
+                        <small>19 de abril, 2026 - 2:32 p. m.</small>
+                    </div>
+                    <span class="status-pill status-info">En revisi&oacute;n</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Veh&iacute;culo abandonado en calle secundaria</strong>
+                        <span>Incidente atendido y marcado como resuelto por el equipo municipal.</span>
+                        <small>17 de abril, 2026 - 11:08 a. m.</small>
+                    </div>
+                    <span class="status-pill status-success">Resuelto</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Veh&iacute;culo en zona de discapacitados</strong>
+                        <span>Se solicit&oacute; verificaci&oacute;n manual antes de cerrar el caso.</span>
+                        <small>15 de abril, 2026 - 5:20 p. m.</small>
+                    </div>
+                    <span class="status-pill status-warning">Seguimiento</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Veh&iacute;culo en ciclov&iacute;a</strong>
+                        <span>Reporte cerrado y puntos agregados a tu balance de recompensas.</span>
+                        <small>12 de abril, 2026 - 8:54 a. m.</small>
+                    </div>
+                    <span class="status-pill status-success">Cerrado</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
 </body>
+<script src="/Js/paneles.js"></script>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recompensas</title>
 <link rel="stylesheet" href="/Css/menu.css">
+<link rel="stylesheet" href="/Css/paneles.css">
 </head>
 <body>
     <header class="navbar">
@@ -44,5 +45,114 @@
         </nav>
     </aside>
 
+    <main class="panel-page">
+        <section class="panel-hero">
+            <div class="panel-hero-top">
+                <div class="hero-icon">
+                    <img src="/Recursos/icons/trophy.svg" alt="Recompensas">
+                </div>
+                <div>
+                    <h2 id="page-welcome">Hola, Usuario</h2>
+                    <p>Consulta tus cr&eacute;ditos, premios disponibles y el progreso de tus canjes.</p>
+                </div>
+            </div>
+
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <span>Cr&eacute;ditos disponibles</span>
+                    <strong>3,480 pts</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>Canjes del mes</span>
+                    <strong>2 completados</strong>
+                </div>
+                <div class="hero-badge">
+                    <span>Pr&oacute;ximo objetivo</span>
+                    <strong>Tarjeta de $250</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-grid">
+            <article class="panel-card">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/trophy.svg" alt="Cr&eacute;ditos">
+                </div>
+                <h3>Saldo actual</h3>
+                <div class="summary-number">3,480</div>
+                <p>Tus reportes verificados siguen acumulando puntos para nuevas recompensas.</p>
+                <div class="tag-row">
+                    <span class="tag">+120 esta semana</span>
+                    <span class="tag">Nivel ciudadano activo</span>
+                </div>
+            </article>
+
+            <article class="panel-card accent-orange">
+                <div class="panel-card-icon">
+                    <img src="/Recursos/icons/docs.svg" alt="Meta">
+                </div>
+                <h3>Meta recomendada</h3>
+                <div class="summary-number">520 pts</div>
+                <p>Te faltan para desbloquear una tarjeta de regalo digital de tu siguiente nivel.</p>
+                <a class="action-button" href="reportes.html">Generar m&aacute;s reportes</a>
+            </article>
+        </section>
+
+        <section class="list-card">
+            <h3>Premios disponibles</h3>
+            <p>Opciones activas para canjear con el saldo que has acumulado.</p>
+            <ul>
+                <li class="list-item">
+                    <div>
+                        <strong>Tarjeta de regalo de $100</strong>
+                        <span>Ideal para un canje r&aacute;pido con aprobaci&oacute;n inmediata.</span>
+                        <small>Requiere 2,500 puntos</small>
+                    </div>
+                    <span class="status-pill status-success">Disponible</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Transferencia bancaria de $250</strong>
+                        <span>Se deposita a tu cuenta registrada despu&eacute;s de la validaci&oacute;n.</span>
+                        <small>Requiere 4,000 puntos</small>
+                    </div>
+                    <span class="status-pill status-warning">Casi lista</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Kit ciudadano premium</strong>
+                        <span>Incluye beneficios para usuarios con participaci&oacute;n constante.</span>
+                        <small>Requiere 6,500 puntos</small>
+                    </div>
+                    <span class="status-pill status-neutral">Bloqueada</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="list-card">
+            <h3>Canjes recientes</h3>
+            <p>Seguimiento de las recompensas que ya solicitaste.</p>
+            <ul>
+                <li class="list-item">
+                    <div>
+                        <strong>Tarjeta de regalo de $100</strong>
+                        <span>Canje procesado correctamente y enviado a tu correo.</span>
+                        <small>12 de abril, 2026</small>
+                    </div>
+                    <span class="status-pill status-success">Entregado</span>
+                </li>
+                <li class="list-item">
+                    <div>
+                        <strong>Transferencia bancaria de $150</strong>
+                        <span>En validaci&oacute;n por parte del &aacute;rea administrativa.</span>
+                        <small>16 de abril, 2026</small>
+                    </div>
+                    <span class="status-pill status-info">En revisi&oacute;n</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
 </body>
+<script src="/Js/paneles.js"></script>
 </html>
