@@ -61,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.querySelectorAll('.registro').forEach(btn => {
+            btn.addEventListener('click', () => {
+                localStorage.setItem('usuario', "Usuario Registro");
+                window.location.href = "index.html";
+            });
+        });
+
     document.querySelectorAll('.google-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             localStorage.setItem('usuario', "Usuario Google");

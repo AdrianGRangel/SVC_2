@@ -107,12 +107,14 @@ main.panel-page {
     color: var(--texto-secundario);
 }
 
+/*
 .summary-number {
     font-size: 2rem;
     font-weight: 700;
     color: var(--guinda);
     margin: 12px 0 6px;
 }
+*/
 
 .accent-orange .summary-number,
 .accent-orange .panel-card-icon {
