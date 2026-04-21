@@ -97,8 +97,7 @@
 }
 
 #reportes-icon {
-    background-color:steelblue;
-    color: steelblue;
+    background-color: skyblue;
 }
 
 .card-reportes h3 {
@@ -165,13 +164,11 @@
 }
 
 #icon-recompensas { 
-    background-color: #880044; 
-    color: #880044;
+    background-color: goldenrod; 
 }
 
 #icon-reportes { 
-    background-color: #FF6600; 
-    color: #FF6600;
+    background-color: steelblue; 
 }
 
 .card h3 {

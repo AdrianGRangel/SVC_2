@@ -4,6 +4,7 @@ const btnGuardar = document.getElementById('btn-guardar-cambios');
 const btnCancelar = document.getElementById('btn-cancelar-edicion');
 const modalPass = document.getElementById('modal-password');
 const inputsPerfil = document.querySelectorAll('#form-perfil input[readonly]');
+const inputPerfil = document.querySelectorAll('#form-perfil input');
 
 btnEditar.addEventListener('click', () => {
     inputsPerfil.forEach(input => input.removeAttribute('readonly'));
@@ -64,15 +65,30 @@ window.onclick = function(event) {
     }
 }
 
-window.onload = function() {
-    document.getElementById('nombre-perfil').value = localStorage.getItem('nombre') || "";
-    document.getElementById('apellidos-perfil').value = localStorage.getItem('apellidos') || "";
-    document.getElementById('telefono-perfil').value = localStorage.getItem('telefono') || "";
-    document.getElementById('correo-perfil').value = localStorage.getItem('correo') || "";
-    document.getElementById('direccion-perfil').value = localStorage.getItem('direccion') || "";
+btnGuardar.addEventListener('click', () => {
+    localStorage.setItem('nombre', document.getElementById('nombre').value);
+    localStorage.setItem('apellidos', document.getElementById('apellidos').value);
+    localStorage.setItem('telefono', document.getElementById('telefono').value);
+    localStorage.setItem('correo', document.getElementById('correo').value);
+    localStorage.setItem('direccion', document.getElementById('direccion').value);
 
-    const usuario = localStorage.getItem('usuario');
-    if (usuario) {
-        document.getElementById('usuario-label').textContent = usuario;
-    }
+    inputPerfil.forEach(input => input.setAttribute('readonly', true));
+    btnEditar.style.display = 'incline-block';
+    btnGuardar.style.display = 'none';
+    btnCancelar.style.display = 'none';
+
+    alert('Datos guardados correctamente');
+});
+
+btnCancelar.addEventListener('click', () => {
+    location.reload();
+});
+
+window.onload = () => {
+    
+ocument.getElementById('nombre').value = localStorage.getItem('nombre') || '';
+    document.getElementById('apellidos').value = localStorage.getItem('apellidos') || '';
+    document.getElementById('telefono').value = localStorage.getItem('telefono') || '';
+    document.getElementById('correo').value = localStorage.getItem('correo') || '';
+    document.getElementById('direccion').value = localStorage.getItem('direccion') || '';
 };
