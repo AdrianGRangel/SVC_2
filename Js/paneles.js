@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const correo = localStorage.getItem("correo");
+  const usuario = Usuario.cargar();
   const welcome = document.getElementById("welcome");
   const pageWelcome = document.getElementById("page-welcome");
 
   if (welcome) {
-    welcome.textContent = correo || "Usuario";
+    welcome.textContent = usuario.nombre || "Usuario";
   }
 
   if (pageWelcome) {
-    pageWelcome.textContent = correo ? `Hola, ${correo}` : "Hola, Usuario";
+    pageWelcome.textContent = usuario.nombre
+      ? `Hola, ${usuario.nombre}`
+      : "Hola, Usuario";
   }
 });
 
