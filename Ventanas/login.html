@@ -1,49 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <link rel="stylesheet" href="/Css/login.css">
-</head>
+    <link rel="stylesheet" href="/Css/login.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container" id="container">
+      <div class="form-container sign-in-container">
+        <form id="loginForm">
+          <h1>Iniciar Sesión</h1>
+          <button type="button" id="btn-google-login" class="google-btn">
+            <img src="/Recursos/icons/google.png" alt="Google" />Iniciar sesión
+            con Google
+          </button>
+          <!--Apartado para el correo electronico-->
+          <input
+            type="email"
+            id="login-email"
+            placeholder="Correo Electrónico"
+            required
+          />
+          <input
+            type="password"
+            id="login-pass"
+            placeholder="Contraseña"
+            required
+            checked
+          />
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          <button type="submit" id="iniciar">Iniciar Sesión</button>
+          <p>
+            ¿No tienes una cuenta?
+            <button type="button" class="ghost" id="signUp">Registrarse</button>
+          </p>
+        </form>
+      </div>
 
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Iniciar Sesión</h1>
-                <button type="button" id="btn-google" class="google-btn"> 
-                    <img src="/Recursos/icons/google.png" alt="Google">Iniciar sesión con Google</button>
-                <!--Apartado para el correo electronico-->
-                <input type="email" placeholder="Correo Electrónico" required />
-                <input type="password" placeholder="Contraseña" required checked/>
-                <a href="#">¿Olvidaste tu contraseña?</a>
-                <button type="submit" id="iniciar">Iniciar Sesión</button>
-                <p>¿No tienes una cuenta? <button class="ghost" id="signUp">Registrarse</button> </p>
-            </form>
-        </div>
+      <div class="form-container sign-up-container">
+        <form id="registerForm">
+          <h1>Crear Cuenta</h1>
+          <button type="button" id="btn-google-register" class="google-btn">
+            <img src="/Recursos/icons/google.png" alt="Google" />Iniciar sesión
+            con Google
+          </button>
 
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Crear Cuenta</h1>
-                <button type="button" id="btn-google" class="google-btn"> 
-                    <img src="/Recursos/icons/google.png" alt="Google">Iniciar sesión con Google</button>
+          <input type="text" id="reg-nombre" placeholder="Nombre" required />
+          <input
+            type="text"
+            id="reg-apellidos"
+            placeholder="Apellidos"
+            required
+          />
+          <input
+            type="number"
+            id="reg-telefono"
+            placeholder="Teléfono celular"
+            required
+          />
+          <input
+            type="email"
+            id="reg-correo"
+            placeholder="Correo Electrónico"
+            required
+          />
+          <input
+            type="text"
+            id="reg-direccion"
+            placeholder="Dirección"
+            required
+          />
+          <input
+            type="password"
+            id="reg-pass"
+            placeholder="Contraseña"
+            minlength="4"
+            required
+          />
+          <input
+            type="password"
+            id="reg-confirmar-pass"
+            placeholder="Confirmar Contraseña"
+            minlength="4"
+            required
+          />
 
-                    <input type="text" id="reg-nombre" placeholder="Nombre" required/>
-                    <input type="text" id="reg-apellidos" placeholder="Apellidos" required />
-                    <input type="number" id="reg-telefono" placeholder="Teléfono celular" required />
-                    <input type="email" id="reg-correo" placeholder="Correo Electrónico" required />
-                    <input type="text" id="reg-direccion" placeholder="Dirección" required />
-                    <input type="password" id="reg-pass" placeholder="Contraseña" minlength="4" required />
-                    <input type="password" id="reg-confirmar-pass" placeholder="Confirmar Contraseña" minlength="4" required />
-
-                <button type="submit" id="registro">Registrarse</button>
-                <p>¿Ya tienes una cuenta? <button class="ghost" id="signIn">Iniciar Sesión</button> </p>
-            </form>
-        </div>
+          <button type="submit" id="registro">Registrarse</button>
+          <p>
+            ¿Ya tienes una cuenta?
+            <button type="button" class="ghost" id="signIn">
+              Iniciar Sesión
+            </button>
+          </p>
+        </form>
+      </div>
     </div>
-
-</body>
-<script src="/Js/login.js"></script>
+    <script src="/Js/login.js"></script>
+    <script src="/Js/usuario.js"></script>
+  </body>
 </html>

@@ -1,19 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const correo = localStorage.getItem('correo');
-    const display = document.getElementById('welcome-message');
-    const display2 = document.getElementById('welcome');
+document.addEventListener("DOMContentLoaded", function () {
+  const usuario = Usuario.cargar();
+  const display = document.getElementById("welcome");
+  const display2 = document.getElementById("welcome-message");
 
-if(correo){
-    display2.textContent = `${correo}`;
-} else {
-    display2.textContent = 'Invitado';
-}
-
-if(correo){
-    display.textContent = `${correo}, Bienvenido`;
-}   else {
-    display.textContent = 'Usuario, Bienvenido';
-}
-
+  if (usuario && usuario.correo) {
+    display.textContent =
+      usuario.nombre !== "" ? usuario.nombre : usuario.correo;
+    display2.textContent = `Bienvenido, ${usuario.nombre !== "" ? usuario.nombre : usuario.correo}`;
+  } else {
+    display.textContent = "Usuario";
+    display2.textContent = "Bienvenido, Usuario";
+  }
 });
-

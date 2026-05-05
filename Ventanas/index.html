@@ -1,87 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="/Css/index.css">
-    <link rel="stylesheet" href="/Css/menu.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="/Css/index.css" />
+    <link rel="stylesheet" href="/Css/menu.css" />
+  </head>
+  <body>
     <header class="navbar">
-        <div class="nav-left">
-            <button id="menutoggles" onclick="menu.classList.toggle('active')">
-                <img src="/Recursos/icons/menu.svg" alt="Menu">
-            </button>
+      <div class="nav-left">
+        <button id="menutoggles" onclick="menu.classList.toggle('active')">
+          <img src="/Recursos/icons/menu.svg" alt="Menu" />
+        </button>
         <h1>Inicio</h1>
-        </div>
+      </div>
 
-        <div id="usuario">
-            <h3 id="welcome">Usuario</h3>
-            <button id="cerrarSesion">
-                <a href="login.html"><img src="/Recursos/icons/login.svg" alt="Cerrar Sesión"></a>
-            </button>
-        </div>
+      <div id="usuario">
+        <h3 id="welcome">Usuario</h3>
+        <button id="cerrarSesion">
+          <a href="login.html"
+            ><img src="/Recursos/icons/login.svg" alt="Cerrar Sesión"
+          /></a>
+        </button>
+      </div>
     </header>
 
     <!--Es el menu despegable para acceder a las paginas-->
     <aside id="menu">
-        <nav class="menu-links">
-            <div class="menu-header">
-                <h2>Menú</h2>
-                <button id="close-btn" onclick="menu.classList.remove('active')">
-                    <h3>X</h3>
-                </button>
-            </div>
-        <hr>
+      <nav class="menu-links">
+        <div class="menu-header">
+          <h2>Menú</h2>
+          <button id="close-btn" onclick="menu.classList.remove('active')">
+            <h3>X</h3>
+          </button>
+        </div>
+        <hr />
         <ul>
-            <a href="index.html"><img src="/Recursos/icons/home.svg">Inicio</a>
-            <a href="reportes.html"><img src="/Recursos/icons/docs.svg">Reportes</a>
-            <a href="perfil.html"><img src="/Recursos/icons/person.svg">Perfil</a>
-            <a href="recompensa.html"><img src="/Recursos/icons/trophy.svg">Recompensas</a>
-            <a href="notificaciones.html"><img src="/Recursos/icons/bell.svg">Notificaciones</a>
-            <a href="historial.html"><img src="/Recursos/icons/history.svg">Historial</a>
+          <a href="index.html"><img src="/Recursos/icons/home.svg" />Inicio</a>
+          <a href="reportes.html"
+            ><img src="/Recursos/icons/docs.svg" />Reportes</a
+          >
+          <a href="perfil.html"
+            ><img src="/Recursos/icons/person.svg" />Perfil</a
+          >
+          <a href="recompensa.html"
+            ><img src="/Recursos/icons/trophy.svg" />Recompensas</a
+          >
+          <a href="notificaciones.html"
+            ><img src="/Recursos/icons/bell.svg" />Notificaciones</a
+          >
+          <a href="historial.html"
+            ><img src="/Recursos/icons/history.svg" />Historial</a
+          >
         </ul>
-        </nav>
+      </nav>
     </aside>
 
     <main>
-            <section class="hero-container">
-                <div class="avatar-circle"><img src="/Recursos/icons/person.svg" alt="Usuario"></div>
-                    <h2 id="welcome-message">Usuario</h2>
-                    <p>Bienvenido a tu panel de reportes</p>
-                    <div class="conteiner-recompensas-actuales">
-                        <img src="/Recursos/icons/trophy.svg" alt="recompensas">
-                        <p>Tus créditos</p>
-                        <h3>0,000,000</h3>
-                    </div>
-            </section>
+      <section class="hero-container">
+        <div class="avatar-circle">
+          <img src="/Recursos/icons/person.svg" alt="Usuario" />
+        </div>
+        <h2 id="welcome-message">Usuario</h2>
+        <p>Bienvenido a tu panel de reportes</p>
+        <div class="conteiner-recompensas-actuales">
+          <img src="/Recursos/icons/trophy.svg" alt="recompensas" />
+          <p>Tus créditos</p>
+          <h3>0,000,000</h3>
+        </div>
+      </section>
 
-                <div class="card-reportes">
-                    <img id="reportes-icon" src="/Recursos/icons/docs.svg" alt="reportes">
-                    <h3>Reportes Actuales: </h3>
-                    <h2> 12 </h2>
-                    <a id="reportes-actuales" href="historial.html">Historial</a>
-                </div>
+      <div class="card-reportes">
+        <img id="reportes-icon" src="/Recursos/icons/docs.svg" alt="reportes" />
+        <h3>Reportes Actuales:</h3>
+        <h2>12</h2>
+        <a id="reportes-actuales" href="historial.html">Historial</a>
+      </div>
 
-            <div class="main-container">
-                <div class="card card-recompensas">
-                    <img id="icon-recompensas" src="/Recursos/icons/trophy.svg" alt="créditos">
-                    <h3>Créditos Ganados</h3>
-                    <h2>0,000,000</h2>
-                    <a id="recompensas" href="recompensa.html">Ver Recompensas</a>
-                </div>
+      <div class="main-container">
+        <div class="card card-recompensas">
+          <img
+            id="icon-recompensas"
+            src="/Recursos/icons/trophy.svg"
+            alt="créditos"
+          />
+          <h3>Créditos Ganados</h3>
+          <h2>0,000,000</h2>
+          <a id="recompensas" href="recompensa.html">Ver Recompensas</a>
+        </div>
 
-                <div class="card card-reportes">
-                    <img id="icon-reportes" src="/Recursos/icons/docs.svg" alt="Reportes">
-                    <h3>¿Quieres hacer un reporte?</h3>
-                    <p>Ayuda a mejorar la ciudad reportando problemas urbanos y gana créditos</p>
-                    <a id="reportes" href="reportes.html">Ver Reportes</a>
-                </div>
-            </div>
-
+        <div class="card card-reportes">
+          <img
+            id="icon-reportes"
+            src="/Recursos/icons/docs.svg"
+            alt="Reportes"
+          />
+          <h3>¿Quieres hacer un reporte?</h3>
+          <p>
+            Ayuda a mejorar la ciudad reportando problemas urbanos y gana
+            créditos
+          </p>
+          <a id="reportes" href="reportes.html">Ver Reportes</a>
+        </div>
+      </div>
     </main>
-</body>
-<script src="/Js/index.js"></script>
+    <script src="/Js/usuario.js"></script>
+    <script src="/Js/index.js"></script>
+  </body>
 </html>
