@@ -89,7 +89,6 @@ function simularGuardarPass() {
   }
 
   if (input1.value === input2.value) {
-    localStorage.setItem("userPassword", input1.value);
     alert("Contraseña actualizada correctamente.");
     cerrarModalPass();
     input1.value = "";
